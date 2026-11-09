@@ -2,7 +2,7 @@
 <?php
 
 // Memuat Composer Autoload
-require_once __DIR__ . "/../vendor/autoload.php";
+require_once __DIR__ . "/../../vendor/autoload.php";
 
 // Membaca file .env
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/..");

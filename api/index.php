@@ -1,6 +1,7 @@
 <?php
 
-require_once "../config/config.php";
+// Menggunakan __DIR__ agar path selalu akurat
+require_once __DIR__ . '/config/config.php';
 
 // Kategori berita
 $categories = [
