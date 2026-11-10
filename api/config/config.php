@@ -1,15 +1,17 @@
-
 <?php
 
 // Memuat Composer Autoload
 require_once __DIR__ . "/../../vendor/autoload.php";
 
-// Membaca file .env
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../..");
-$dotenv->load();
+// Membaca file .env hanya jika file tersebut benar-benar ada (untuk development lokal)
+$envPath = __DIR__ . "/../..";
+if (file_exists($envPath . "/.env")) {
+    $dotenv = Dotenv\Dotenv::createImmutable($envPath);
+    $dotenv->safeLoad(); // safeLoad() mencegah error jika file .env tidak ditemukan
+}
 
-// Mengambil API Key dari .env
-define("NEWS_API_KEY", $_ENV["NEWS_API_KEY"]);
+// Mengambil API Key dari $_ENV (bisa dari file .env lokal atau Vercel Dashboard)
+define("NEWS_API_KEY", $_ENV["NEWS_API_KEY"] ?? getenv("NEWS_API_KEY"));
 
 // Fungsi HTTP GET Request
 function http_request_get($url)
