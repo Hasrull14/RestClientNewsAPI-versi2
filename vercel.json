@@ -1,3 +1,4 @@
+
 {
     "functions": {
         "api/**/*.php": {
@@ -5,6 +6,9 @@
         }
     },
     "routes": [
+        {
+            "handle": "filesystem"
+        },
         {
             "src": "/(.*)",
             "dest": "/api/index.php"
