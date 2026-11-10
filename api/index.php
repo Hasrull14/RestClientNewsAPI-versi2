@@ -102,10 +102,10 @@ function imageUrl($url)
     <title>NewsHub - Latest News</title>
 
     <!-- Bootstrap 5.3 -->
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/api/assets/bootstrap/css/bootstrap.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/api/assets/css/style.css">
 
 </head>
 
@@ -543,7 +543,7 @@ function imageUrl($url)
 
 
     <!-- Bootstrap JS -->
-    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/api/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
