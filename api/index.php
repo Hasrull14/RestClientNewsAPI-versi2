@@ -101,11 +101,14 @@ function imageUrl($url)
 
     <title>NewsHub - Latest News</title>
 
-    <!-- Bootstrap 5.3 -->
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <?php
+    $basePath = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false)
+        ? '/PPL/tugas7/RestClientNewsAPI-versi2.2'
+        : '';
+    ?>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="<?= $basePath ?>/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= $basePath ?>/assets/css/style.css">
 
 </head>
 
